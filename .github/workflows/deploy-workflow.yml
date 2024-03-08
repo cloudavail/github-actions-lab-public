@@ -8,12 +8,12 @@ on:
         type: string
 
 jobs:
-  environment:
-    name: ${{ inputs.ENVIRONMENT }}
   deploy:
     runs-on: ubuntu-latest
     env:
       ENVIRONMENT: ${{ inputs.ENVIRONMENT }}
+    environment:
+      name: ${{ inputs.ENVIRONMENT }}
     steps:
       - name: deploy
         run: echo "Deploying to $ENVIRONMENT"
