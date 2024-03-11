@@ -16,4 +16,4 @@ jobs:
       name: ${{ inputs.ENVIRONMENT }}
     steps:
       - name: deploy
-        run: echo "Deploying to $ENVIRONMENT from $GITHUB_HEAD_REF branch"
+        run: echo "Deploying to ${{ ENVIRONMENT }} from ${{ GITHUB_HEAD_REF }}"
