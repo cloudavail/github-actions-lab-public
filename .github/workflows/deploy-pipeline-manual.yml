@@ -3,9 +3,6 @@ name: deploy-pipeline-manual
 on:
   workflow_dispatch:
     inputs:
-      BRANCH:
-        required: true
-        type: string
       ENVIRONMENT:
         required: true
         type: string
@@ -19,4 +16,4 @@ jobs:
       name: ${{ inputs.ENVIRONMENT }}
     steps:
       - name: deploy
-        run: echo "Deploying to $ENVIRONMENT from $BRANCH branch"
+        run: echo "Deploying to $ENVIRONMENT from $GITHUB_HEAD_REF branch"
