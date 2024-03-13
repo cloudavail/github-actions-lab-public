@@ -16,8 +16,9 @@ jobs:
     env:
       BRANCH: ${{ inputs.BRANCH }}
       ENVIRONMENT: ${{ inputs.ENVIRONMENT }}
+      GITHUB_SHA: ${{ github.sha }}
     environment:
       name: ${{ inputs.ENVIRONMENT }}
     steps:
       - name: deploy
-        run: echo "Deploying to ${ENVIRONMENT} from ${BRANCH} branch"
+        run: echo "Deploying to ${ENVIRONMENT} from ${BRANCH} branch with Github SHA ${GITHUB_SHA}"
