@@ -1,11 +1,8 @@
-name: deploy-pipeline-manual-20240312-1715
+name: deploy-pipeline-manual
 
 on:
   workflow_dispatch:
     inputs:
-      BRANCH:
-        required: true
-        type: string
       ENVIRONMENT:
         required: true
         type: string
