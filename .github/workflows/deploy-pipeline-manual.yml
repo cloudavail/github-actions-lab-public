@@ -1,4 +1,4 @@
-name: deploy-pipeline-manual
+name: deploy-pipeline-manual-20240312-1715
 
 on:
   workflow_dispatch:
